@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+    {% block content %}
+
+
+    <div class="global-container">
+        <table border="1">
+            <tr>
+            <th>username</th>
+            <th>email</th>
+        </tr>
+
+        <form>
+            {% for n in query_result %}
+            <tr>
+            <td>{{n.username}}</td>
+            <td>{{n.email}}</td>
+            </tr>
+             {% endfor %}
+
+
+        </form>
+        </table>
+    </div>
+
+
+    {% endblock %}
