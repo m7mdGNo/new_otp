@@ -108,7 +108,7 @@ def error_page(request):
 
 def send_mail_after_registration(email , token):
     subject = 'Your accounts need to be verified'
-    message = f'Hi paste the link to verify your account https://websitegno.herokuapp.com/{token}'
+    message = f'Hi paste the link to verify your account https://websitegno.herokuapp.com/verify/{token}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message , email_from ,recipient_list )
